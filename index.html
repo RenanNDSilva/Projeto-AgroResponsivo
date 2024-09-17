@@ -12,29 +12,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-            <a class="navbar-brand me-auto" href="#">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 fixed-top">
+            <a class="navbar-brand ps-5" href="#">
                 <img src="assets/img/Logo_1.png" alt="Agrosapiens Logo"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-around ps-5" id="navbarNav">
+                <ul class="navbar-nav fs-5" id="nav_list">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Início</a>
+                        <a class="nav-link" href="#section1">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
+                        <a class="nav-link" href="#section2">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Guardião</a>
+                        <a class="nav-link" href="#section3">Guardião</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="#section4">Contato</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">     
@@ -44,11 +45,11 @@
                             <a href="login.html">Entrar</a>
                         </div>
                     </button>
-                    <div class="social-icons d-flex social-media-buttons">
+                    <div class="social-icons d-flex social-media-buttons ps-2">
                         <a href="https://api.whatsapp.com/send?phone=5516997136311&text=Ol%C3%A1,%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20solu%C3%A7%C3%A3o%20Guardi%C3%A3o.%20Agrade%C3%A7o%20desde%20j%C3%A1%20pela%20aten%C3%A7%C3%A3o" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                        <a href="">
+                        <a href="#">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/agrosapiens-ltda-4b1455310/" target="_blank">
@@ -59,5 +60,18 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section class="video-section container my-5">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ratio ratio-16x9">
+                        <video autoplay loop muted>
+                            <source src="assets/video/AgroSapiens.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
