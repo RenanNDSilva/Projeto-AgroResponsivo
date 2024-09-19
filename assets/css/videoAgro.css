@@ -1,0 +1,26 @@
+.video-section {
+    position: relative;
+    height: 830px; /* Altura fixa do vídeo */
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura do vídeo se ajusta à largura do contêiner */
+    height: 100%; /* Altura do vídeo se ajusta à altura do contêiner */
+    object-fit: cover; /* O vídeo cobrirá a área disponível sem distorção */
+}
+
+/* Opção para pequenos dispositivos */
+@media (max-width: 768px) {
+    .video-section {
+        height: 600px; /* Ajuste a altura conforme necessário para telas menores */
+    }
+    .video-section video {
+        width: 100vw; /* Mantém o vídeo cobrindo toda a largura */
+        height: 100vh; /* Mantém o vídeo cobrindo toda a altura */
+        object-fit: cover;
+    }
+}

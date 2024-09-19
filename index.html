@@ -23,7 +23,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-around ps-5" id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-between ps-5" id="navbarNav">
                 <ul class="navbar-nav fs-5" id="nav_list">
                     <li class="nav-item">
                         <a class="nav-link" href="#section1">Início</a>
@@ -38,13 +38,20 @@
                         <a class="nav-link" href="#section4">Contato</a>
                     </li>
                 </ul>
-                <div class="d-flex align-items-center">     
-                    <button class="me-3 btn-default-login" type="button">
-                        <div class="btn-config">
-                            <i class="fa-solid fa-user" style="color: #fff;"></i>
-                            <a href="login.html">Entrar</a>
-                        </div>
-                    </button>
+    
+                <!-- Separar o botão Entrar dos ícones sociais -->
+                <div class="d-flex align-items-center">
+                    <!-- Botão Entrar -->
+                    <div class="me-5">
+                        <button class="btn-default-login" type="button">
+                            <div class="btn-config">
+                                <i class="fa-solid fa-user" style="color: #fff;"></i>
+                                <a href="login.html">Entrar</a>
+                            </div>
+                        </button>
+                    </div>
+    
+                    <!-- Ícones Sociais -->
                     <div class="social-icons d-flex social-media-buttons ps-2">
                         <a href="https://api.whatsapp.com/send?phone=5516997136311&text=Ol%C3%A1,%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20solu%C3%A7%C3%A3o%20Guardi%C3%A3o.%20Agrade%C3%A7o%20desde%20j%C3%A1%20pela%20aten%C3%A7%C3%A3o" target="_blank">
                             <i class="fa-brands fa-whatsapp"></i>
@@ -59,19 +66,17 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>    
     <main>
-        <section class="video-section container my-5">
+        <section class="video-section">
             <div class="row">
                 <div class="col-12">
-                    <div class="ratio ratio-16x9">
-                        <video autoplay loop muted>
-                            <source src="assets/video/AgroSapiens.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                    <video autoplay loop muted class="full-screen-video">
+                        <source src="assets/video/AgroSapiens.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-        </section>
+        </section>      
     </main>
 </body>
 </html>
