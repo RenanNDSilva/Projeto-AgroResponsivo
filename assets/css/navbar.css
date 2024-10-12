@@ -44,9 +44,15 @@ header {
     display: none;
 }
 
+.social-login {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre o botão e os ícones de redes sociais */
+}
+
 @media screen and (max-width: 1170px) {
     #nav_list,
-    #navbar .btn-default {
+    #navbar .social-login {
         display: none;
     }
 
@@ -74,5 +80,21 @@ header {
     #mobile_nav_list .nav-item {
         list-style: none;
         text-align: center;
-    } 
+    }
+    
+    /* Garantir que a social-login esteja visível e em coluna no mobile */
+    .social-login {
+        display: flex;
+        flex-direction: column; /* Muda para coluna no mobile */
+        align-items: center;    /* Centraliza os itens horizontalmente */
+        gap: 10px;              /* Espaçamento entre o botão e as redes sociais */
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .btn-default-enter {
+        display: block; /* Mantém o botão "Entrar" visível */
+        width: 60%;    /* Ocupa toda a largura disponível */
+        text-align: center; /* Centraliza o texto do botão */
+    }
 }

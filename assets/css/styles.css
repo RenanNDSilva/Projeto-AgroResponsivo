@@ -34,7 +34,7 @@ section {
     padding: 28px 8%;
 }
 
-.btn-default {
+.btn-default, .btn-default-enter {
     border: none;
     display: flex;
     align-items: center;

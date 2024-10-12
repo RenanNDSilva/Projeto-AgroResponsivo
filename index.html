@@ -32,17 +32,32 @@
                     <a href="#testimonials">Contato</a>
                 </li>
             </ul>
-
-            <button class="btn-default btn-config">
-                <i class="fa-solid fa-user" style="color: #fff; padding-right: 5px;"></i>
-                <a href="">Entrar</a>
-            </button>
-
+    
+            <!-- Nova div que contém o botão "Entrar" e as redes sociais -->
+            <div class="social-login">
+                <button class="btn-default-enter btn-config">
+                    <i class="fa-solid fa-user" style="color: #fff; padding-right: 5px;"></i>
+                    <a href="">Entrar</a>
+                </button>
+    
+                <div class="social-media-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=5516997136311&text=Ol%C3%A1,%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20solu%C3%A7%C3%A3o%20Guardi%C3%A3o.%20Agrade%C3%A7o%20desde%20j%C3%A1%20pela%20aten%C3%A7%C3%A3o" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/agrosapiens-ltda-4b1455310/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+    
             <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </nav>
-
+    
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
                 <li class="nav-item">
@@ -58,15 +73,35 @@
                     <a href="#testimonials">Contato</a>
                 </li>
             </ul>
-
-            <button class="btn-default btn-config">
-                <i class="fa-solid fa-user" style="color: #fff;"></i>
-                <a href="">Login</a>
-            </button>
+    
+            <div class="social-login">
+                <button class="btn-default-enter btn-config">
+                    <i class="fa-solid fa-user" style="color: #fff; padding-right: 5px;"></i>
+                    <a href="">Entrar</a>
+                </button>
+    
+                <div class="social-media-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=5516997136311&text=Ol%C3%A1,%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20solu%C3%A7%C3%A3o%20Guardi%C3%A3o.%20Agrade%C3%A7o%20desde%20j%C3%A1%20pela%20aten%C3%A7%C3%A3o" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/agrosapiens-ltda-4b1455310/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main id="content">
+        <section id="video-section">
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="assets/video/AgroSapiens.mp4" type="video/mp4">
+                Seu navegador não suporta essa tag de vídeo.
+            </video>
+        </section>
         <section id="home">
             <div class="shape"></div>
             <div id="cta">
@@ -76,6 +111,19 @@
                 <div id="cta_buttons">
                     <a href="#navegacao" class="btn-default">
                         Contato
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="guardian">
+            <div class="shape-two"></div>
+            <div id="cta">
+                <h1 class="title"><span>Guardião</span></h1>
+                <p class="description">O Guardião é uma solução completa de monitoramento meteorológico para ambientes agrícolas. Como uma miniestação meteorológica de última geração, ele oferece muito mais do que as soluções tradicionais. Equipado com hardware robusto instalado no campo, o Guardião não apenas mede temperatura, umidade e pressão atmosférica em tempo real, mas também fornece dados sobre índice de calor, pressão de vapor e déficit de pressão de vapor.</p>
+                <p class="description">Esses dados são transmitidos para uma plataforma web intuitiva, permitindo que agricultores e gestores monitorem as condições ambientais de suas propriedades de forma remota e precisa. A flexibilidade do Guardião permite que ele seja usado em vários pontos da propriedade, possibilitando a avaliação de microclimas e fornecendo insights valiosos para otimizar a produção agrícola.</p>
+                <div id="cta_buttons">
+                    <a href="login.html" target="_blank" class="btn-default">
+                        Iniciar Guardião
                     </a>
                 </div>
             </div>
@@ -90,7 +138,7 @@
                 © 2024 por AgroSapiens | criado por ADS023
             </span>
 
-            <span>
+            <span id="copyright">
                 Crédito de algumas imagens: Freepik.com
             </span>
         </div>
