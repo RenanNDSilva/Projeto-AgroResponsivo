@@ -3,6 +3,7 @@
 @import url(video.css);
 @import url(footer.css);
 @import url(home.css);
+@import url(guardian.css);
 
 :root {
     --color-primary-1: #edf2ed;
