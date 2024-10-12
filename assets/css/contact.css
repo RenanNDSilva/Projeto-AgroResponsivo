@@ -1,0 +1,266 @@
+#contact {
+    display: flex;
+    min-height: calc(100vh - 91px);
+    position: relative;
+}
+
+#contact-form {
+    position: absolute;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    z-index: 1;
+}
+
+#contact-form .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);
+}
+
+#contact-form .text {
+    font-size: 4rem;
+    color: var(--color-neutral-1);
+}
+
+/* #contact-form form {
+    padding: 30px 0 0 0 0;
+} */
+
+#contact-form form .form-row {
+    display: block;
+    margin: 32px 0;
+    margin-left: -19px;
+}
+
+form .form-row .input-data {
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+    border: none;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.input-data input, .textarea textarea {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-data input:focus ~ label, .textarea textarea:focus ~ label, .input-data input:valid ~ label, .textarea textarea:valid ~ label {
+    transform: translateY(-30px);
+    color: var(--color-neutral-1);
+    font-size: 14px;
+}
+
+.inputField:focus::placeholder {
+    color: var(--color-neutral-1); /* Placeholder visível quando o campo está em foco */
+    transition: color 1s ease;
+    transition: opacity 1s ease, border-color 1s ease;
+    opacity: 1;
+}
+
+.textarea textarea {
+    resize: none;
+    padding-top: 10px;
+}
+
+.input-data label {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.textarea label {
+    width: 100%;
+    bottom: 40px;
+    background: var(--color-primary-1);
+
+}
+
+.input-data .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    /* background: var(--color-neutral-1); */
+}
+
+.input-data .underline:before, .input-data .underline:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    /* background: var(--color-neutral-1); */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before, .underline:after, .textarea textarea:focus .underline:before, .underline:after, .input-data input:valid .underline:before, .underline:after, .textarea textarea:valid .underline:before, .underline:after {
+    transform: scaleX(1);
+    border: none;
+}
+
+.inputField::placeholder {
+    opacity: 0;
+
+}
+
+.submit-btn .input-data{
+    height: 45px !important;
+    width: 25% !important;
+    overflow: hidden;
+}
+
+.submit-btn .input-data .inner {
+    border-radius: 12px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* left: -100%; */
+    /* background: var(--color-neutral-1); */
+    /* transition: all 0.3s; */
+    background: none; /* Cor de fundo inicial */
+    color: var(--color-neutral-1); /* Cor do texto inicial */
+    transition: all 0.1s ease-in-out; /* Animação suave */
+    border: 2px solid var(--color-neutral-1);
+}
+
+.submit-btn .input-data input {
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: var(--color-neutral-1);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.submit-btn .input-data input:hover {
+    color: var(--color-primary-1);
+    background: var(--color-neutral-1); /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixo na tela */
+    z-index: 1; /* Ficar acima do conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: white; /* Cor de fundo do conteúdo do modal */
+    margin: 15% auto; /* 15% do topo e centralizado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura */
+    max-width: 300px; /* Largura máxima */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+    text-align: center; /* Centralizar texto */
+    color: black; /* Cor do texto */
+    position: relative; /* Necessário para posicionar o ícone */
+    padding-top: 40px; /* Espaço para o ícone */
+    animation: fadeIn 0.5s; /* Animação de fade-in */
+    height: 200px; /* Altura desejada */
+}
+
+/* Ícone de verificação */
+.check-icon {
+    font-size: 50px;
+    color: #4CAF50; /* Cor do ícone de verificação */
+    position: absolute;
+    top: -50px; /* Ajuste para posicionar o ícone acima da div */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white; /* Cor de fundo do ícone */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Botão OK */
+#okButton {
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#okButton:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar o mouse */
+}
+
+#contact-description {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+    margin-left: auto; /* Alinha o texto à direita */
+}
+
+#contact-description .title {
+    font-size: 4rem;
+    color: var(--color-neutral-1);;
+}
+
+#contact-description .title span {
+    color: var(--color-primary-6);
+}
+
+#contact-description .description {
+    font-size: 1.2rem;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media screen and (max-width: 1170px) {
+
+    .submit-btn .input-data {
+        width: 150px; /* Mantenha a largura fixa em telas menores */
+        min-width: 150px; /* Garante que o botão não diminua mais que 150px */
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .submit-btn .input-data {
+        width: 150px; /* Mantenha a largura fixa em telas menores */
+        min-width: 150px; /* Garante que o botão não diminua mais que 150px */
+    }
+}
+

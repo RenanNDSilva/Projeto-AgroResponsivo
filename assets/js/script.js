@@ -46,3 +46,30 @@ $(document).ready(function() {
         distance: '20%'
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("form");
+    const modal = document.getElementById("alertModal");
+    const okButton = document.getElementById("okButton");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();  // Impede o envio padrão do formulário
+
+        // Exibe o modal de alerta
+        modal.style.display = "block";
+    });
+
+    // Fecha o modal quando o usuário clica no botão OK
+    okButton.addEventListener("click", function() {
+        modal.style.display = "none";
+        // Limpa os campos do formulário
+        form.reset();
+    });
+
+    // Fecha o modal quando o usuário clica fora do modal
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
