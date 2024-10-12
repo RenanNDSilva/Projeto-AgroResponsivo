@@ -45,6 +45,12 @@ $(document).ready(function() {
         duration: 2000,
         distance: '20%'
     });
+
+    ScrollReveal().reveal('#contact-description', {
+        origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -71,5 +77,68 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target === modal) {
             modal.style.display = "none";
         }
+    });
+});
+
+const estados = [
+    "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
+    "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
+    "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí",
+    "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia",
+    "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"
+];
+
+document.addEventListener("DOMContentLoaded", function() {
+    const estadoInput = document.getElementById("estado");
+    const autocompleteList = document.getElementById("autocomplete-list");
+    const submitRow = document.getElementById("submitRow");
+
+    if (!estadoInput || !autocompleteList || !submitRow) {
+        console.error("Um ou mais elementos não foram encontrados no DOM");
+        return; // Saia da função se os elementos não forem encontrados
+    }
+
+    estadoInput.addEventListener("input", function() {
+        console.log("Input triggered"); // Verifique se este log aparece
+        const inputText = this.value.toLowerCase();
+        let matches = estados.filter(estado => estado.toLowerCase().startsWith(inputText));
+
+        if (inputText === "") {
+            matches = [];
+        }
+
+        showAutocomplete(matches);
+    });
+
+    function showAutocomplete(matches) {
+        if (matches.length === 0) {
+            autocompleteList.innerHTML = "";
+            return;
+        }
+
+        const autocompleteItems = matches.map(match => `<div>${match}</div>`).join("");
+        autocompleteList.innerHTML = autocompleteItems;
+
+        autocompleteList.querySelectorAll("div").forEach(item => {
+            item.addEventListener("click", function() {
+                estadoInput.value = this.textContent;
+                autocompleteList.innerHTML = "";
+            });
+        });
+    }
+
+    // Fechar a lista de autocompletar quando clicar fora dela
+    document.addEventListener("click", function(event) {
+        if (!event.target.matches("#estado")) {
+            autocompleteList.innerHTML = "";
+        }
+    });
+
+    estadoInput.addEventListener("focus", function() {
+        submitRow.style.display = "none"; // Oculta a linha do botão de envio
+    });
+
+    estadoInput.addEventListener("blur", function() {
+        submitRow.style.display = "block"; // Exibe a linha do botão de envio
     });
 });
