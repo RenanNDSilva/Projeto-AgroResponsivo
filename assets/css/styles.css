@@ -5,6 +5,7 @@
 @import url(home.css);
 @import url(guardian.css);
 @import url(contact.css);
+@import url(navigation.css);
 
 :root {
     --color-primary-1: #edf2ed;
@@ -26,6 +27,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {

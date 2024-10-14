@@ -249,18 +249,51 @@ form .form-row .textarea {
 }
 
 @media screen and (max-width: 1170px) {
-
-    .submit-btn .input-data {
-        width: 150px; /* Mantenha a largura fixa em telas menores */
-        min-width: 150px; /* Garante que o botão não diminua mais que 150px */
+    #contact {
+        flex-direction: column; /* Muda para coluna também em tablets */
+        align-items: center; /* Alinha os itens ao centro */
     }
 
+    #contact-form {
+        width: 90%; /* Ajusta a largura do formulário para tablets */
+        position: relative; /* Remove o posicionamento absoluto */
+        margin-top: 20px; /* Ajusta o espaçamento superior */
+    }
+
+    #contact-description {
+        width: 90%; /* Ajusta a largura da descrição para tablets */
+        margin-left: 0; /* Remove o alinhamento à direita */
+        margin-top: 20px; /* Adiciona um espaçamento superior */
+        text-align: center; /* Centraliza o texto para tablets */
+    }
+
+    .submit-btn .input-data {
+        width: 150px; /* Mantém o botão de envio ajustado para tablets */
+        min-width: 150px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    #contact {
+        flex-direction: column; /* Mantém o layout em coluna para telas menores */
+        align-items: center;
+    }
+
+    #contact-form {
+        width: 90%; /* Ajusta a largura para telas pequenas */
+        position: relative;
+        margin-top: 20px;
+    }
+
+    #contact-description {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
     .submit-btn .input-data {
-        width: 150px; /* Mantenha a largura fixa em telas menores */
-        min-width: 150px; /* Garante que o botão não diminua mais que 150px */
+        width: 150px;
+        min-width: 150px;
     }
 }
-

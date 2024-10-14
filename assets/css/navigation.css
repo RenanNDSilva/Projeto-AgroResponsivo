@@ -1,0 +1,148 @@
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 2%;
+    align-items: flex-start;
+}
+
+#navigation img {
+    max-height: 100%; 
+    height: 250px; /* Ajuste da altura para um valor menor */
+    max-width: 100% !important; 
+    width: 350px !important; 
+}
+
+.navigation-list {
+    align-items: flex-start;
+}
+
+.navigation-list h2 {
+    font-size: 2rem;
+    color: var(--color-neutral-1);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: var(--color-neutral-1);
+}
+
+.navigation-list ul li{
+    display: block; /* Empilhar itens verticalmente */
+    list-style: none;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.navigation-list a {
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    font-weight: 600;
+}
+
+#navigation .social-media-buttons {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column; /* Organiza os botões verticalmente */
+    gap: 18px;
+}
+
+#navigation .social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+    z-index: 3;
+}
+
+#navigation .social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Remover position absolute para melhor alinhamento */
+#navigation .social-media-buttons .item-one,
+#navigation .social-media-buttons .item-two,
+#navigation .social-media-buttons .item-three {
+    cursor: default;
+    transition: none;
+    padding-left: 10px; /* Alinha o texto corretamente */
+    font-size: 1rem;
+    color: var(--color-neutral-1);
+}
+
+/* Adicionar espaçamento entre os textos e os ícones */
+#navigation .social-media-buttons div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    #navigation {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        padding: 30px; /* Ajusta o padding para telas menores */
+    }
+
+    #navigation .img-logo img {
+        height: auto;
+        width: 200px; /* Diminui o tamanho da logo */
+    }
+
+    .navigation-list, 
+    .contact {
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .navigation-list ul {
+        padding: 0;
+    }
+
+    .navigation-list ul li {
+        margin: 10px 0; /* Adiciona espaço entre os itens da navegação */
+    }
+
+    .social-media-buttons {
+        align-items: center; /* Centraliza os ícones de contato */
+    }
+}
+
+@media (max-width: 1170px) {
+    #navigation {
+        display: flex;
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens */
+        padding: 30px; /* Ajusta o padding para telas menores */
+    }
+
+    #navigation .img-logo img {
+        height: auto;
+        width: 200px; /* Diminui o tamanho da logo */
+    }
+
+    .navigation-list, 
+    .contact {
+        text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .navigation-list ul {
+        padding: 0;
+    }
+
+    .navigation-list ul li {
+        margin: 10px 0; /* Adiciona espaço entre os itens da navegação */
+    }
+
+    .social-media-buttons {
+        align-items: center; /* Centraliza os ícones de contato */
+    }
+}
