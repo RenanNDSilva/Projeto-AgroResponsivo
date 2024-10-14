@@ -248,7 +248,7 @@ form .form-row .textarea {
     to {opacity: 1;}
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1280px) {
     #contact {
         flex-direction: column; /* Muda para coluna também em tablets */
         align-items: center; /* Alinha os itens ao centro */
