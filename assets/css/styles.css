@@ -107,3 +107,21 @@ section {
     transform: scale(1.05) translateY(-5px);
     
 }
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 1.5rem;
+    background: transparent;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-neutral-1);
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--color-neutral-1);
+    text-decoration: none;
+    z-index: 5;
+}
