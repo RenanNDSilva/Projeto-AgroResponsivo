@@ -85,6 +85,25 @@
             text-align: center;
             /* Centraliza o texto do botão */
         }
+
+        @media screen and (max-width: 768px) {
+            .chart-row {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chart-column {
+                width: 550px;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .chart-column {
+                width: 300px;
+            }
+        }
     }
 </style>
 
